@@ -1,0 +1,27 @@
+.container-fluid{
+    height: 100vh;
+}
+.time-capsule{
+    width: 100px;
+    height: 100px;
+}
+.board-section{
+    width: 100%;
+}
+.board-wrapper{
+    padding: 300px;
+    height: 100%;
+}
+.board-box{
+    min-width: 50%;
+}
+.board-tile{
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+.board-tile:hover{
+    cursor: pointer;
+}
