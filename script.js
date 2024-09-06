@@ -61,6 +61,7 @@ $(document).ready(function(){
             $('.alert-notif').text("Player 1 time has ran out! PLAYER 2 WIN!")
             $('.winner-name').text("PLAYER 2 WIN!")
             $('.alert-modal-info').text('Player 1 time has ran out.')
+            $('.winner-profile').prop('src',$('.p2-profile').prop('src'))
             $('#alert-modal').modal('show')
         }
         else{
@@ -68,6 +69,7 @@ $(document).ready(function(){
             $('.alert-notif').text("Player 2 time has ran out! PLAYER 1 WIN!")
             $('.winner-name').text("PLAYER 1 WIN!")
             $('.alert-modal-info').text('Player 2 time has ran out.')
+            $('.winner-profile').prop('src',$('.p1-profile').prop('src'))
             $('#alert-modal').modal('show')
 
         }
