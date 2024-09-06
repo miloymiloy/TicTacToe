@@ -7,7 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -17,26 +19,36 @@
     <div class="container-fluid p-0">
         <main class="row m-0  d-flex justify-content-center ">
             <section class="col-lg-8 col-md-12 users-section d-flex justify-content-between p-2">
-                <div class="user-profile text-center">
+                <div class="user-profile d-flex justify-content-center align-items-center flex-column   ">
                     <img src="https://static.vecteezy.com/system/resources/previews/019/896/008/original/male-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png" height="100" class="border border-2 rounded-circle p-1 p1-profile"/>
                     <p class="m-0">Player 1</p>
-                    <p>Moves : <span class="player1-moves">5</span></p>
+                    <p class="m-0">Moves : <span class="player1-moves m-0">5</span></p>
+                </div>
+                <div class="time-box d-flex justify-content-center align-items-center">
+                    <div class="time-capsule border border-2 rounded-circle d-flex justify-content-center align-items-center text-center">
+                     <h4 class="m-0 countdown-timerp1">15</h4>
+                    </div>
                 </div>
                 <div class="score-board d-flex justify-content-center align-items-center">
                     <h1 class="p1-score">0</h1>
                 </div>
-                <div class="time-box d-flex justify-content-center align-items-center">
+                <div class="time-box d-flex justify-content-center align-items-center d-none">
                    <div class="time-capsule border border-2 p-4 px-2 rounded-circle d-flex justify-content-center align-items-center text-center">
-                    <h4 class="m-0 px-4 countdown-timer">30</h4>
+                    <h4 class="m-0 px-4 countdown-timer">15</h4>
                    </div>
                 </div>
                 <div class="score-board d-flex justify-content-center align-items-center">
                     <h1 class="p2-score">0</h1>
                 </div>
-                <div class="user-profile text-center">
+                <div class="time-box d-flex justify-content-center align-items-center">
+                    <div class="time-capsule border border-2 rounded-circle d-flex justify-content-center align-items-center text-center">
+                     <h4 class="m-0 countdown-timerp2">15</h4>
+                    </div>
+                </div>
+                <div class="user-profile d-flex justify-content-center align-items-center flex-column">
                     <img src="https://www.pngkey.com/png/full/72-729716_user-avatar-png-graphic-free-download-icon.png" height="100" class="border border-2 rounded-circle p-1 p2-profile"/>
                     <p class="m-0">Player 2</p>
-                    <p>Moves : <span class="player2-moves">5</span></p>
+                    <p class="m-0">Moves : <span class="player2-moves">5</span></p>
                 </div>
             </section>
             <section class="alert-section text-center">
@@ -79,11 +91,28 @@
             <section class="button-section text-center">
                 <button class="start-btn btn btn-primary">Start Game</button>
                 <button class="restart-btn btn btn-danger" disabled>Restart</button>
+                
             </section>
 
         </main>
 
     </div>
+
+
+
+    <div class="modal" id="alert-modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" tab>
+        <div class="modal-dialog modal-dialog-centered ">
+          <div class="modal-content alert-modal-container">
+            <div class="modal-body d-flex justify-content-center align-items-center flex-column">
+                <img src="" height="100" class="winner-profile"/>
+                <h1 class="winner-name">Player 1 Win!</h1>
+                <p class="alert-modal-info"></p>
+                <button class="btn btn-success mt-4 new-game-btn" data-bs-dismiss="modal" >New Game</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
 
     <script src="script.js"></script>
