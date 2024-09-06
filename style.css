@@ -48,6 +48,10 @@
     }
     footer{
         position: absolute;
-        bottom: 20px;
+        bottom: 0;
     }
+    .container-fluid{
+        padding-top: 10vh;
+    }
+
   }
