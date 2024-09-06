@@ -51,6 +51,7 @@
         bottom: 0;
     }
     .container-fluid{
+        padding: 0;
         padding-top: 10vh;
     }
 
